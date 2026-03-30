@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.page-shell {
+  @apply min-h-screen bg-gradient-to-br from-red-50 via-white to-gray-100;
+}
+
+.leaflet-driver-marker {
+  filter: hue-rotate(205deg) saturate(1.45);
+}
+
+.leaflet-request-marker {
+  filter: hue-rotate(340deg) saturate(1.55);
+}
+
+.pin-icon-wrapper {
+  background: transparent;
+  border: 0;
+}
+
+.map-pin {
+  position: relative;
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  border: 2px solid #ffffff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+}
+
+.map-pin::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ffffff;
+}
+
+.map-pin-red {
+  background: #ef4444;
+}
+
+.map-pin-blue {
+  background: #2563eb;
+}
